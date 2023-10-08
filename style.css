@@ -1,0 +1,92 @@
+body{
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+
+		background-image: url('pro.jpg'); 
+		background-repeat: no-repeat;
+		background-size: 100% 100%; 
+		background-attachment: fixed; 
+		background-position: center center; 
+		background-color: black; 
+		padding: 0;
+		margin: 0;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+	
+	
+}
+
+nav {
+	width: 100vw;
+	position: fixed; 
+	top: 0; 
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+}
+li{
+	position: relative;
+	padding: 0 20px;
+	height: 100%;
+	display: flex;
+}
+a{
+	z-index: 1;
+	color: white;
+	text-decoration: none;
+	font-family: 'Poppins',sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 10px 5px;
+}
+li:before{
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: rgb(58, 17, 226);
+	right: 0;
+	z-index: 0;
+	top:33.33%;
+	transition: all 0.5s;
+}
+li:after{
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: white;
+	left: 0;
+	z-index: 0;
+	bottom: 0;
+	transition: all 0.5s;
+}
+a:before{
+	position: absolute;
+	content: "";
+	height: 33.33%;
+	width: 0;
+	background-color: rgb(58, 17, 226);
+	bottom: 66.66%;
+	left: 0;
+	transition: all 0.5s;
+}
+li:hover:before,
+li:hover:after,
+li:hover a:before{
+	width: 100%;
+}
